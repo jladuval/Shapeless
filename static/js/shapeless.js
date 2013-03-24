@@ -1,6 +1,6 @@
 $(function(){
-	var baseUrl = "home.html";
-	var baseImageUrl = "static/images/shapeless";
+	var baseUrl = "index.html";
+	var baseImageUrl = "static/images/Shapeless";
 	var maxComicNo = 37;
 
 	var current = parseInt($.url().param("no"));
@@ -9,10 +9,10 @@ $(function(){
 	}
 	
 	if(current > 1){
-		$('.previous').attr('href', 'home.html?no=' + (current - 1))
+		$('.previous').attr('href', baseUrl + '?no=' + (current - 1))
 	}
 	if(current < maxComicNo){
-		$('.next').attr('href', 'home.html?no=' + (current + 1))
+		$('.next').attr('href', baseUrl +  '?no=' + (current + 1))
 	}
 	
 	$('#comicno').html('#' + current);
